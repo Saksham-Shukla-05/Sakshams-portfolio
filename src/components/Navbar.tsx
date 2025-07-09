@@ -11,6 +11,7 @@ import {
 import { usePathname } from "next/navigation";
 import DarkMode from "@/components/DarkMode";
 import { SidebarTrigger } from "./ui/sidebar";
+
 export default function NavigationMenuDemo() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
@@ -71,7 +72,11 @@ export default function NavigationMenuDemo() {
           <DarkMode />
         </NavigationMenuItem>
       </NavigationMenuList>
-      <NavigationMenuList className="md:hidden">
+      <NavigationMenuList className="md:hidden flex gap-2 justify-between items-center">
+        <NavigationMenuLink>
+          <Link href={"/Resume"}>Resume</Link>
+        </NavigationMenuLink>
+        <DarkMode />
         <SidebarTrigger />
       </NavigationMenuList>
     </NavigationMenu>
