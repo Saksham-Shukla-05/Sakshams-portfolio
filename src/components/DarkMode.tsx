@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ModeToggle() {
   const { theme, setTheme } = useTheme();
-  const [Icon, setIcon] = React.useState(false);
+
   return (
     <Button
       variant="outline"
