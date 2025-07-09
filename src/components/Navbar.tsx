@@ -17,13 +17,13 @@ export default function NavigationMenuDemo() {
   const isActive = (href: string) => pathname === href;
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList className="gap-5 px-4 hidden md:flex">
+      <NavigationMenuList className="gap-5  px-4 hidden md:flex">
         <NavigationMenuItem>
           <NavigationMenuLink
             className={
               isActive("/")
-                ? "text-purple-500 dark:text-purple-500 font-semibold"
-                : "text-black dark:text-white"
+                ? "md:text-lg text-sm text-purple-500 dark:text-purple-500 font-semibold"
+                : "md:text-lg text-sm text-black dark:text-white"
             }
           >
             <Link href={"/"}>Home</Link>
@@ -33,8 +33,8 @@ export default function NavigationMenuDemo() {
           <NavigationMenuLink
             className={
               isActive("/About")
-                ? "text-purple-500 dark:text-purple-500 font-semibold"
-                : "text-black dark:text-white"
+                ? " md:text-lg text-sm  text-purple-500 dark:text-purple-500 font-semibold"
+                : " md:text-lg text-sm  text-black dark:text-white"
             }
           >
             <Link href={"/About"}>About</Link>
@@ -44,8 +44,8 @@ export default function NavigationMenuDemo() {
           <NavigationMenuLink
             className={
               isActive("/Projects")
-                ? "text-purple-500 dark:text-purple-500 font-semibold"
-                : "text-black dark:text-white"
+                ? "md:text-lg text-sm   text-purple-500 dark:text-purple-500 font-semibold"
+                : "md:text-lg text-sm   text-black dark:text-white"
             }
           >
             <Link href="/Projects">Projects</Link>
@@ -55,8 +55,8 @@ export default function NavigationMenuDemo() {
           <NavigationMenuLink
             className={
               isActive("/Contact")
-                ? "text-purple-500 dark:text-purple-500 font-semibold"
-                : "text-black dark:text-white"
+                ? "md:text-lg text-sm text-purple-500 dark:text-purple-500 font-semibold"
+                : "md:text-lg text-sm   text-black dark:text-white"
             }
           >
             <Link href={"/Contact"}>Contact</Link>
@@ -72,10 +72,7 @@ export default function NavigationMenuDemo() {
           <DarkMode />
         </NavigationMenuItem>
       </NavigationMenuList>
-      <NavigationMenuList className="md:hidden flex gap-2 justify-between items-center">
-        <NavigationMenuLink>
-          <Link href={"/Resume"}>Resume</Link>
-        </NavigationMenuLink>
+      <NavigationMenuList className="md:hidden   flex gap-2 justify-between items-center">
         <DarkMode />
         <SidebarTrigger />
       </NavigationMenuList>

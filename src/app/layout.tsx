@@ -41,8 +41,8 @@ export default function RootLayout({
             <div className="md:hidden">
               <AppSidebar />
             </div>
-            <div className="w-full h-fit border-b-2 p-3 flex border-2 justify-between items-center">
-              <div className="font-mono md:text-xl text-lg animate-pulse dark:text-purple-500 font-extrabold">
+            <div className="w-full h-fit border-b-2 p-3   flex  justify-between items-center">
+              <div className="font-mono md:text-2xl  text-[15px]  dark:text-purple-500 font-extrabold">
                 &lt;/Saksham&gt;
               </div>
               <Navbar />
