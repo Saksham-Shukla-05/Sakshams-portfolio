@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import Navbar from "@/components/Navbar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,6 +37,17 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <SidebarProvider>
+            <div className="md:hidden">
+              <AppSidebar />
+            </div>
+            <div className="w-full h-fit border-b-2 p-3 flex border-2 justify-between items-center">
+              <div className="font-mono md:text-xl text-lg animate-pulse dark:text-purple-500 font-extrabold">
+                &lt;/Saksham&gt;
+              </div>
+              <Navbar />
+            </div>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

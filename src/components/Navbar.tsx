@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import DarkMode from "@/components/DarkMode";
-import { Menu } from "lucide-react";
+import { SidebarTrigger } from "./ui/sidebar";
 export default function NavigationMenuDemo() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
@@ -72,7 +72,7 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
       </NavigationMenuList>
       <NavigationMenuList className="md:hidden">
-        <Menu />
+        <SidebarTrigger />
       </NavigationMenuList>
     </NavigationMenu>
   );
