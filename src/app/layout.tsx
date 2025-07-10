@@ -36,17 +36,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
           <SidebarProvider>
             <div className="md:hidden">
               <AppSidebar />
             </div>
-            <div className="w-full h-fit border-b-2 p-3   flex  justify-between items-center">
-              <div className="font-mono md:text-2xl  text-[15px]  dark:text-purple-500 font-extrabold">
-                &lt;/Saksham&gt;
-              </div>
-              <Navbar />
-            </div>
+            {children}
           </SidebarProvider>
         </ThemeProvider>
       </body>

@@ -64,7 +64,7 @@ export default function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink>
+          <NavigationMenuLink className="md:text-lg text-sm">
             <Link href={"/Resume"}>Resume</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
