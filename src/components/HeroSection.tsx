@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function CardDemo() {
   return (
-    <Card className="dark:bg-black bg-white w-full max-w-7xl rounded-none border-none p-0">
+    <Card className="dark:bg-black bg-white w-full  rounded-none border-none p-0">
       <CardContent className="p-0">
         <div className="flex flex-row gap-8 md:gap-0 flex-wrap  p-2   ">
           <div className="md:w-1/2 w-full flex justify-evenly md:items-start items-center md:gap-0 gap-6  p-1 flex-col ">
@@ -22,22 +22,22 @@ export default function CardDemo() {
             <p className="text-center md:text-lg text-sm md:text-left font-semibold">
               A passionate Full Stack Developer from India{" "}
             </p>
-            <p className="text-center md:text-left">
+            <p className="text-center md:text-left md:text-lg text-sm">
               I specialize in building modern, scalable web apps with MERN stack
               and TypeScript.
             </p>
-            <div className="items-start w-fit  flex gap-3 ">
-              <Button className="bg-purple-600 hover:bg-purple-700 cursor-pointer text-white">
+            <div className="items-start w-fit   flex gap-3 ">
+              <Button className="bg-purple-600   size-max hover:bg-purple-700 cursor-pointer text-white">
                 Download Resume
               </Button>
-              <Button className="bg-purple-600 hover:bg-purple-700 cursor-pointer text-white">
+              <Button className="bg-purple-600  size-max hover:bg-purple-700 cursor-pointer text-white">
                 Contact Me
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2 justify-center w-full gap-2 flex p-1 ">
+          <div className="md:w-1/2 justify-center hidden w-full gap-2 md:flex p-1 ">
             <Image
-              className="rounded-2xl mix-blend-soft-light"
+              className="rounded-2xl "
               src={"/avataaars (1).png"}
               alt="saksham"
               width={280}
