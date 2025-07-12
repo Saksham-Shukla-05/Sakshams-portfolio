@@ -1,47 +1,44 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function CardDemo() {
   return (
-    <Card className="dark:bg-black bg-white w-full  rounded-none border-none p-0">
-      <CardContent className="p-0">
-        <div className="flex flex-row gap-8 md:gap-0 flex-wrap  p-2   ">
-          <div className="md:w-1/2 w-full flex justify-evenly md:items-start items-center md:gap-0 gap-6  p-1 flex-col ">
-            <h1 className="lg:text-3xl md:text-2xl text-xl -mb-2 md:font-extrabold font-normal">
-              Hi, I&apos;m Saksham Shukla👋
+    <Card className="dark:bg-black bg-white w-full rounded-none border-none shadow-none  p-0">
+      <CardContent className="p-0 md:bg-none bg-[url('/wave-haikei3.png')] bg-cover bg-bottom   ">
+        <div className="flex z-20 flex-col md:flex-row items-center justify-between gap-10 md:gap-0 ">
+          {/* Left Section */}
+          <div className="w-full md:w-1/2 flex p-1 flex-col gap-8 text-center md:text-left items-center md:items-start">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+              Hi, I&apos;m Saksham Shukla
             </h1>
-            <p className="text-center md:text-lg text-sm md:text-left font-semibold">
-              A passionate Full Stack Developer from India{" "}
+            <p className="text-base sm:text-lg font-semibold">
+              A passionate Full Stack Developer from India
             </p>
-            <p className="text-center md:text-left md:text-lg text-sm">
-              I specialize in building modern, scalable web apps with MERN stack
-              and TypeScript.
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+              I specialize in building modern, scalable web apps with the MERN
+              stack and TypeScript.
             </p>
-            <div className="items-start w-fit   flex gap-3 ">
-              <Button className="bg-purple-600   size-max hover:bg-purple-700 cursor-pointer text-white">
+
+            <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center md:justify-start">
+              <Button className="bg-purple-700  text-white w-full sm:w-auto">
                 Download Resume
               </Button>
-              <Button className="bg-purple-600  size-max hover:bg-purple-700 cursor-pointer text-white">
+              <Button className="bg-purple-700 text-white w-full sm:w-auto">
                 Contact Me
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2 justify-center hidden w-full gap-2 md:flex p-1 ">
+
+          {/* Right Section */}
+          <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              className="rounded-2xl "
-              src={"/avataaars (1).png"}
+              className="rounded-2xl w-48 sm:w-52 md:w-56 lg:w-72 xl:w-80 h-auto"
+              src="/avataaars (2).png"
               alt="saksham"
               width={280}
               height={170}
+              priority
             />
           </div>
         </div>
