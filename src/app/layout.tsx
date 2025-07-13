@@ -37,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SidebarProvider>
-            <div className="md:hidden">
+            <div className="md:hidden ">
               <AppSidebar />
             </div>
             {children}

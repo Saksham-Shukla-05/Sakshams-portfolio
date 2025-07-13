@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CardDemo() {
   return (
-    <Card className="md:mt-0 mt-20 h-screen dark:bg-black bg-white w-full rounded-none border-none shadow-none  p-0">
+    <Card className="md:mt-0 mt-10 h-screen dark:bg-black bg-white w-full rounded-none border-none shadow-none  p-0">
       <CardContent className="h-full   p-0 md:bg-none bg-[url('/wave-haikei3.png')] bg-cover bg-top   ">
         <div className="h-full flex  flex-col md:flex-row items-center  justify-between gap-10 md:gap-0 ">
           {/* Left Section */}

@@ -16,7 +16,7 @@ export default function NavigationMenuDemo() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
   return (
-    <nav className="w-full h-fit  mb-5 md:mb-0  fixed flex  justify-between items-center">
+    <nav className="w-full h-fit  mb-5 md:mb-0 sticky top-1 bg-white dark:bg-black   z-50 flex  justify-between items-center">
       <div className="font-mono md:text-2xl text-xl   dark:text-purple-500 font-extrabold">
         &lt;/Saksham&gt;
       </div>
