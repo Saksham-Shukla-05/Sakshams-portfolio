@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function CardDemo() {
   return (
-    <Card className=" h-screen dark:bg-black bg-white w-full rounded-none border-none shadow-none  p-4">
-      <CardContent className="h-full  md:bg-none p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-bottom   ">
+    <Card className="md:h-screen  border-none dark:bg-black bg-white  w-full rounded-none shadow-none  p-5">
+      <CardContent className="h-full relative  border-none md:bg-[url('/blob-scene-haikei2.png')] p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-no-repeat bg-bottom   ">
         <div className="h-full flex flex-col md:flex-row items-center  justify-between gap-10 md:gap-0 ">
           {/* Left Section */}
-          <div className="w-full h-full justify-center gap-10  flex flex-col   text-center md:text-left  items-center ">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <div className="w-full h-full justify-center gap-8  flex flex-col text-center items-center ">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
               Hi, I&apos;m Saksham Shukla
             </h1>
             <p className="text-base sm:text-lg font-semibold">
@@ -31,16 +31,14 @@ export default function CardDemo() {
           </div>
 
           {/* Right Section */}
-          <div className="md:hidden w-full md:w-1/2 relative ">
-            <div className="relative z-20 flex justify-around">
-              <Image
-                className="rounded-2xl w-48 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto"
-                src="/avataaars.png"
-                width={270}
-                height={180}
-                alt="saksham"
-              />
-            </div>
+          <div className="w-full  md:hidden   flex justify-center">
+            <Image
+              className="rounded-2xl  -mt-5 w-48  sm:w-52  md:w-64 lg:w-72 xl:w-80 h-auto"
+              src="/avataaars.png"
+              width={270}
+              height={180}
+              alt="saksham"
+            />
           </div>
         </div>
       </CardContent>
