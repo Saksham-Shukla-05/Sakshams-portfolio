@@ -1,11 +1,4 @@
-import {
-  MessageCircle,
-  Home,
-  Info,
-  FileText,
-  Settings,
-  FolderDot,
-} from "lucide-react";
+import { MessageCircle, Home, Info, FileText, FolderDot } from "lucide-react";
 
 import {
   Sidebar,
@@ -35,11 +28,7 @@ const items = [
     url: "/Projects",
     icon: FolderDot,
   },
-  {
-    title: "Contact",
-    url: "/Contact",
-    icon: MessageCircle,
-  },
+
   {
     title: "Resume",
     icon: FileText,

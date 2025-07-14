@@ -16,8 +16,8 @@ export default function NavigationMenuDemo() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
   return (
-    <nav className="w-full h-fit  mb-5 md:mb-0 sticky top-1 bg-white dark:bg-black   z-50 flex  justify-between items-center">
-      <div className="font-mono md:text-2xl text-xl   dark:text-purple-500 font-extrabold">
+    <nav className="w-full h-fit p-4 dark:bg-black bg-white mb-5 md:mb-0 sticky top-0    z-50 flex  justify-between items-center">
+      <div className="font-mono md:text-2xl text-xl    dark:text-purple-500 font-extrabold">
         &lt;/Saksham&gt;
       </div>
       <NavigationMenu viewport={false}>
@@ -55,18 +55,6 @@ export default function NavigationMenuDemo() {
               }
             >
               <Link href="/Projects">Projects</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              className={
-                isActive("/Contact")
-                  ? "md:text-lg text-sm text-purple-500 dark:text-purple-500 font-semibold"
-                  : "md:text-lg text-sm   text-black dark:text-white"
-              }
-            >
-              <Link href={"/Contact"}>Contact</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
