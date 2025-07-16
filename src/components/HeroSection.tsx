@@ -24,7 +24,11 @@ export default function CardDemo() {
 
             <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center md:justify-start">
               <Button
-                onClick={() => toast("Event has been created")}
+                onClick={() =>
+                  toast("Downloading Resume", {
+                    description: "You are downloading Saksham Shukla's resume.",
+                  })
+                }
                 className="bg-purple-700 cursor-pointer  text-white w-full sm:w-auto"
               >
                 Download Resume
