@@ -24,6 +24,7 @@ export default function NavigationMenuDemo() {
         <NavigationMenuList className="gap-5  px-4 hidden md:flex ">
           <NavigationMenuItem>
             <NavigationMenuLink
+              asChild
               className={
                 isActive("/")
                   ? "md:text-lg text-sm text-purple-500 dark:text-purple-500 font-semibold"
@@ -36,6 +37,7 @@ export default function NavigationMenuDemo() {
 
           <NavigationMenuItem>
             <NavigationMenuLink
+              asChild
               className={
                 isActive("/About")
                   ? " md:text-lg text-sm  text-purple-500 dark:text-purple-500 font-semibold"
@@ -48,6 +50,7 @@ export default function NavigationMenuDemo() {
 
           <NavigationMenuItem>
             <NavigationMenuLink
+              asChild
               className={
                 isActive("/Projects")
                   ? "md:text-lg text-sm   text-purple-500 dark:text-purple-500 font-semibold"
@@ -59,7 +62,7 @@ export default function NavigationMenuDemo() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink className="md:text-lg text-sm">
+            <NavigationMenuLink asChild className="md:text-lg text-sm">
               <Link href={"/Resume"}>Resume</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>

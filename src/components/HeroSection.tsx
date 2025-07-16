@@ -1,6 +1,8 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function CardDemo() {
   return (
@@ -21,7 +23,10 @@ export default function CardDemo() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center md:justify-start">
-              <Button className="bg-purple-700 cursor-pointer  text-white w-full sm:w-auto">
+              <Button
+                onClick={() => toast("Event has been created")}
+                className="bg-purple-700 cursor-pointer  text-white w-full sm:w-auto"
+              >
                 Download Resume
               </Button>
               <Button className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto">
@@ -34,7 +39,7 @@ export default function CardDemo() {
           <div className="w-full  md:hidden   flex justify-center">
             <Image
               className="rounded-2xl  -mt-5 w-48  sm:w-52  md:w-64 lg:w-72 xl:w-80 h-auto"
-              src="/avataaars.png"
+              src="/saksham_shukla.png"
               width={270}
               height={180}
               alt="saksham"
