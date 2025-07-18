@@ -11,7 +11,7 @@ export default function CardDemo() {
         <div className="h-full flex flex-col md:flex-row items-center  justify-between gap-10 md:gap-0 ">
           {/* Left Section */}
           <div className="w-full h-full justify-center gap-8  flex flex-col text-center items-center ">
-            <h1 className="md:text-5xl text-2xl font-bold">
+            <h1 className="md:text-5xl text-2xl  font-bold">
               Hi, I&apos;m Saksham Shukla
             </h1>
             <p className="text-base sm:text-lg font-semibold">
