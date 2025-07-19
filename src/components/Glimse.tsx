@@ -84,7 +84,7 @@ const CARDS = [
 
 export default function Glimse() {
   return (
-    <section className="md:min-h-screen w-full gap-7 justify-around p-5 flex flex-col  items-center  dark:bg-black bg-white text-black dark:text-white">
+    <section className="w-full gap-24 justify-around p-5 flex flex-col  items-center  dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full   text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
@@ -114,7 +114,7 @@ export default function Glimse() {
           </p>
         </div>
 
-        <div className="flex md:w-1/2 w-full   items-center  flex-wrap justify-around gap-12 ">
+        <div className="flex md:w-1/2 w-full   h-fit     items-center  flex-wrap justify-around gap-12 ">
           <CardStack items={CARDS} />
         </div>
       </div>
