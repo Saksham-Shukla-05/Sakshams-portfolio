@@ -28,10 +28,10 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">Tech Stack</h3>
-        <p className="text-sm text-gray-200">
+        <p className="text-sm dark:text-gray-200 text-black">
           I use the MERN stack & TypeScript.
           <span
-            className="block mt-1 text-purple-300 underline cursor-pointer hover:text-purple-400 transition"
+            className="block mt-1 text-black dark:text-purple-300 underline cursor-pointer hover:text-purple-400 transition"
             onClick={() => (window.location.href = "/About")}
           >
             See my complete stack →
@@ -47,12 +47,12 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">DSA</h3>
-        <p className="text-sm text-gray-200">
+        <p className="text-sm  dark:text-gray-200 text-black">
           Solved 300+ LeetCode problems.
           <a
             href="https://leetcode.com/u/saksham729/"
             target="_blank"
-            className="block mt-1 text-purple-300 underline hover:text-purple-400 transition"
+            className="block mt-1 text-black dark:text-purple-300 underline hover:text-purple-400 transition"
           >
             View my profile →
           </a>
@@ -67,12 +67,12 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">Projects</h3>
-        <p className="text-sm text-gray-200">
+        <p className="text-sm  dark:text-gray-200 text-black">
           Check out my GitHub for real-world apps.
           <a
             href="https://github.com/saksham729"
             target="_blank"
-            className="block mt-1 text-purple-300 underline hover:text-purple-400 transition"
+            className="block mt-1 text-black dark:text-purple-300 underline hover:text-purple-400 transition"
           >
             Visit GitHub →
           </a>
@@ -84,37 +84,43 @@ const CARDS = [
 
 export default function Glimse() {
   return (
-    <section className="w-full gap-24 justify-around p-5 flex flex-col  items-center  dark:bg-black bg-white text-black dark:text-white">
+    <section className="mt-15 p-8 md:gap-32 gap-12 w-full justify-around   flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
-      <div className="w-full   text-center">
+      <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           About <span className="text-purple-500">Me</span>
         </h2>
+        <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+          Here’s a quick glimpse of what I do and the technologies I work with.
+        </p>
       </div>
-      {/* Description */}
+
+      {/* Content */}
       <div className="flex flex-row h-full md:gap-0 gap-22 items-center flex-wrap md:justify-center justify-between text-center w-full">
-        <div className="flex md:w-1/2  w-full  text-justify flex-col gap-4 text-sm sm:text-base max-w-4xl text-gray-800 dark:text-gray-300">
+        {/* Left Text */}
+        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base max-w-4xl text-gray-800 dark:text-gray-300">
           <p>
             I’m a full stack developer currently exploring and building projects
             using the MERN stack and TypeScript.
           </p>
           <p>
             I started my journey with{" "}
-            <span className="text-purple-700 bolder ">Java</span> and gradually
-            moved into web development. Over time, I’ve built real projects that
-            are deployed.
+            <span className="text-purple-700 font-semibold">Java</span> and
+            gradually moved into web development. Over time, I’ve built real
+            projects that are deployed.
           </p>
           <p>
             I enjoy writing clean code, learning new tools, and turning ideas
             into simple, functional interfaces.
           </p>
           <p>
-            As of now, I’m focused on sharpening my DSA skills, contributing to
-            projects.
+            As of now, I’m focused on sharpening my DSA skills and contributing
+            to projects.
           </p>
         </div>
 
-        <div className="flex md:w-1/2 w-full   h-fit     items-center  flex-wrap justify-around gap-12 ">
+        {/* Right Cards */}
+        <div className="flex md:w-1/2 w-full items-center flex-wrap justify-around gap-12">
           <CardStack items={CARDS} />
         </div>
       </div>

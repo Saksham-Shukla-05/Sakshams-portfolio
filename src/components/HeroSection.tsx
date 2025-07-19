@@ -6,18 +6,19 @@ import { toast } from "sonner";
 
 export default function CardDemo() {
   return (
-    <Card className="md:h-screen  border-none dark:bg-black bg-white  w-full rounded-none shadow-none  p-5">
-      <CardContent className="h-full relative  border-none md:bg-[url('/blob-blob-2.png')] p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-no-repeat bg-bottom   ">
-        <div className="h-full flex flex-col md:flex-row items-center  justify-between gap-10 md:gap-0 ">
+    <Card className="md:h-screen border-none dark:bg-black bg-white w-full rounded-none shadow-none p-8">
+      <CardContent className="h-full relative border-none md:bg-[url('/blob-blob-2.png')] p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-no-repeat bg-bottom">
+        <div className="h-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
           {/* Left Section */}
-          <div className="w-full h-full justify-center gap-8  flex flex-col text-center items-center ">
-            <h1 className="md:text-5xl text-2xl  font-bold">
-              Hi, I&apos;m Saksham Shukla
+          <div className="w-full h-full justify-center gap-6 flex flex-col text-center items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
+              Hi, I&apos;m{" "}
+              <span className="text-purple-500">Saksham Shukla</span>
             </h1>
-            <p className="text-base sm:text-lg font-semibold">
+            <p className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200">
               A passionate Full Stack Developer from India
             </p>
-            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-xl">
               I specialize in building modern, scalable web apps with the MERN
               stack and TypeScript.
             </p>
@@ -29,7 +30,7 @@ export default function CardDemo() {
                     description: "You are downloading Saksham Shukla's resume.",
                   })
                 }
-                className="bg-purple-700 cursor-pointer  text-white w-full sm:w-auto"
+                className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto"
               >
                 Download Resume
               </Button>
@@ -40,9 +41,9 @@ export default function CardDemo() {
           </div>
 
           {/* Right Section */}
-          <div className="w-full  md:hidden   flex justify-center">
+          <div className="w-full md:hidden flex justify-center">
             <Image
-              className="rounded-2xl  -mt-5 w-48  sm:w-52  md:w-64 lg:w-72 xl:w-80 h-auto"
+              className="rounded-2xl -mt-5 w-48 sm:w-52 md:w-64 lg:w-72 xl:w-80 h-auto"
               src="/saksham_shukla.png"
               width={270}
               height={180}
