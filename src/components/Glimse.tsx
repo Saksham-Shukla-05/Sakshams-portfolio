@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { CardStack } from "./ui/card-stack";
 import { CircuitBoard, Github, Layers2 } from "lucide-react";
+
 export const Highlight = ({
   children,
   className,
@@ -20,6 +21,7 @@ export const Highlight = ({
     </span>
   );
 };
+
 const CARDS = [
   {
     id: 0,
@@ -28,7 +30,7 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">Tech Stack</h3>
-        <p className="text-sm dark:text-gray-200 text-black">
+        <p className="text-base sm:text-lg dark:text-gray-200 text-black">
           I use the MERN stack & TypeScript.
           <span
             className="block mt-1 text-black dark:text-purple-300 underline cursor-pointer hover:text-purple-400 transition"
@@ -47,7 +49,7 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">DSA</h3>
-        <p className="text-sm  dark:text-gray-200 text-black">
+        <p className="text-base sm:text-lg dark:text-gray-200 text-black">
           Solved 300+ LeetCode problems.
           <a
             href="https://leetcode.com/u/saksham729/"
@@ -67,7 +69,7 @@ const CARDS = [
     content: (
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-xl font-bold text-purple-400">Projects</h3>
-        <p className="text-sm  dark:text-gray-200 text-black">
+        <p className="text-base sm:text-lg dark:text-gray-200 text-black">
           Check out my GitHub for real-world apps.
           <a
             href="https://github.com/saksham729"
@@ -84,13 +86,13 @@ const CARDS = [
 
 export default function Glimse() {
   return (
-    <section className="mt-15 p-8 md:gap-22 gap-12 w-full justify-around   flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="md:min-h-screen mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
           About <span className="text-purple-500">Me</span>
         </h2>
-        <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+        <p className="mt-2 text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl">
           Here’s a quick glimpse of what I do and the technologies I work with.
         </p>
       </div>
@@ -98,7 +100,7 @@ export default function Glimse() {
       {/* Content */}
       <div className="flex flex-row h-full md:gap-0 gap-22 items-center flex-wrap md:justify-center justify-between text-center w-full">
         {/* Left Text */}
-        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base max-w-4xl text-gray-800 dark:text-gray-300">
+        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-base sm:text-lg md:text-xl max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
             I’m a full stack developer currently exploring and building projects
             using the MERN stack and TypeScript.
