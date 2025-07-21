@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 export default function CardDemo() {
   return (
-    <Card className="md:h-screen  dark:bg-black bg-white w-full rounded-none shadow-none p-8">
+    <Card className="md:h-screen border-none dark:bg-black bg-white w-full rounded-none shadow-none p-8">
       <CardContent className="h-full relative border-none md:bg-[url('/blob-blob-2.png')] p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-no-repeat bg-bottom">
         <div className="h-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
           {/* Left Section */}

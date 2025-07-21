@@ -2,6 +2,14 @@
 import { cn } from "@/lib/utils";
 import { CardStack } from "./ui/card-stack";
 import { CircuitBoard, Github, Layers2 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Highlight = ({
   children,
@@ -89,8 +97,8 @@ export default function Glimse() {
     <section className="md:min-h-screen mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold underline">
-          About <span className="text-purple-500 underline">Me</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          About <span className="text-purple-500">Me</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl">
           Here’s a quick glimpse of what I do and the technologies I work with.
@@ -122,7 +130,26 @@ export default function Glimse() {
         </div>
 
         {/* Right Cards */}
-        <div className="flex md:w-1/2 w-full items-center flex-wrap justify-around gap-12">
+        <div className="flex md:w-1/2 border w-full items-center flex-wrap justify-around gap-12">
+          {/* <Carousel className="  h-fit">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel> */}
           <CardStack items={CARDS} />
         </div>
       </div>
