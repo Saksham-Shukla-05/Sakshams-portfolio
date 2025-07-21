@@ -7,17 +7,54 @@ export default function Contact() {
           Contact <span className="text-purple-500">Me</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl">
-          Here’s a quick glimpse of what I do and the technologies I work with.
+          Have a question, an opportunity, or just want to say hi? I'd love to
+          hear from you.
         </p>
       </div>
 
       {/* Content */}
-      <div className="flex flex-row h-full md:gap-0 gap-22 items-center flex-wrap md:justify-center justify-between text-center w-full">
-        {/* Left Text */}
-        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-base sm:text-lg md:text-xl max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed"></div>
+      <div className="flex flex-col border md:flex-row h-full md:gap-12 gap-8 items-center justify-between w-full ">
+        {/* Left Section */}
+        <div className="md:w-1/2 w-full text-center md:text-left flex flex-col gap-4 text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-300 leading-relaxed">
+          <p>
+            Feel free to reach out through the form or drop me an email
+            directly. I'm open to freelance projects, collaborations, or simply
+            chatting about tech.
+          </p>
+          <p>
+            <span className="font-semibold text-purple-500">Email:</span>{" "}
+            <a
+              href="mailto:saksham.shukla@example.com"
+              className="underline hover:text-purple-400"
+            >
+              saksham.shukla@example.com
+            </a>
+          </p>
+          <p className="flex gap-4">
+            {/* Example social links */}
+            <a
+              href="https://github.com/saksham729"
+              target="_blank"
+              className="hover:text-purple-500"
+            >
+              GitHub →
+            </a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              className="hover:text-purple-500"
+            >
+              LinkedIn →
+            </a>
+          </p>
+        </div>
 
-        {/* Right Cards */}
-        <div className="flex md:w-1/2 w-full items-center flex-wrap justify-around gap-12"></div>
+        {/* Right Section (Form Placeholder) */}
+        <div className="md:w-1/2 w-full bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+          <p className="text-center text-gray-600 dark:text-gray-300">
+            [Contact Form Coming Soon]
+          </p>
+        </div>
       </div>
     </section>
   );
