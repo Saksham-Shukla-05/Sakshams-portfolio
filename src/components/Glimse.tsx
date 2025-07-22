@@ -106,7 +106,7 @@ export default function Glimse() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-row h-full md:gap-0 gap-22 items-center flex-wrap md:justify-center justify-between text-center w-full">
+      <div className="flex flex-row h-full md:gap-0 gap-24 items-center flex-wrap md:justify-center justify-between text-center w-full">
         {/* Left Text */}
         <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-base sm:text-lg md:text-xl max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
