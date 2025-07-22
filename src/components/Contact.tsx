@@ -20,8 +20,8 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = (data: any) => {
-    console.log("Form Data:", data);
+  const onSubmit = () => {
+    console.log("Form Data:");
   };
 
   return (
@@ -32,7 +32,7 @@ export default function Contact() {
           Contact <span className="text-purple-500">Me</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">
-          Have a question, an opportunity, or just want to say hi? I'd love to
+          Have a question, an opportunity, or just want to say hi? I’d love to
           hear from you.
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
             Feel free to reach out through the form or drop me an email
-            directly. I'm open to freelance projects, collaborations.
+            directly. I’m open to freelance projects, collaborations.
           </p>
           <p>
             <span className="font-semibold text-purple-500">Email:</span>{" "}

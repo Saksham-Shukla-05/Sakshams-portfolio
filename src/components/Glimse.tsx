@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { CardStack } from "./ui/card-stack";
 import { CircuitBoard, Github, Layers2 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 export const Highlight = ({
   children,
