@@ -3,13 +3,6 @@ import { cn } from "@/lib/utils";
 import { CardStack } from "./ui/card-stack";
 import { CircuitBoard, Github, Layers2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export const Highlight = ({
   children,
@@ -109,10 +102,13 @@ export default function Glimse() {
         </p>
       </div>
 
-      {/* Content */}
       <div className="flex flex-row h-full md:gap-0 gap-24 items-center flex-wrap md:justify-center justify-between text-center w-full">
-        {/* Left Text */}
-        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base md:text-lg max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed">
+        {/* Right Cards (should come first on small screens) */}
+        <div className="flex md:w-1/2 w-full items-center flex-wrap justify-around gap-12 order-1 md:order-2">
+          <CardStack items={CARDS} />
+        </div>
+
+        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base md:text-lg max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed order-2 md:order-1">
           <p>
             I’m a full stack developer currently exploring and building projects
             using the MERN stack and TypeScript.
@@ -131,11 +127,6 @@ export default function Glimse() {
             As of now, I’m focused on sharpening my DSA skills and contributing
             to projects.
           </p>
-        </div>
-
-        {/* Right Cards */}
-        <div className="flex md:w-1/2 w-full items-center flex-wrap justify-around gap-12">
-          <CardStack items={CARDS} />
         </div>
       </div>
     </section>

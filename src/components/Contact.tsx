@@ -14,9 +14,15 @@ import { Input } from "@/components/ui/input";
 export default function Contact() {
   const form = useForm({
     defaultValues: {
-      username: "",
+      name: "",
+      email: "",
+      message: "",
     },
   });
+
+  const onSubmit = (data: any) => {
+    console.log("Form Data:", data);
+  };
 
   return (
     <section className="mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
@@ -33,12 +39,13 @@ export default function Contact() {
 
       {/* Content */}
       <div className="flex flex-col md:flex-row h-full md:gap-12 gap-10 items-center justify-between w-full">
-        <div className="md:w-1/2 w-full h-full justify-center  py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+        {/* Left Section */}
+        <div className="md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
             Feel free to reach out through the form or drop me an email
             directly. I'm open to freelance projects, collaborations.
           </p>
-          <p className="">
+          <p>
             <span className="font-semibold text-purple-500">Email:</span>{" "}
             <a
               href="mailto:shuklasaksham729@gmail.com"
@@ -64,58 +71,66 @@ export default function Contact() {
             </a>
           </p>
         </div>
-        {/* Left Section */}
 
         {/* Right Section (Form) */}
         <div className="md:w-1/2 w-full bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit((data) => console.log(data))}
-              className="space-y-6"
-            >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              {/* Name */}
               <FormField
                 control={form.control}
-                name="username"
+                name="name"
                 render={({ field }) => (
-                  <>
-                    <FormItem>
-                      <FormLabel className="text-sm sm:text-base">
-                        Name
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
-                        />
-                      </FormControl>
-                    </FormItem>
-
-                    <FormItem>
-                      <FormLabel className="text-sm sm:text-base">
-                        Email
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
-                        />
-                      </FormControl>
-                    </FormItem>
-
-                    <FormItem>
-                      <FormLabel className="text-sm sm:text-base">
-                        Message
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          {...field}
-                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
-                        />
-                      </FormControl>
-                    </FormItem>
-                  </>
+                  <FormItem>
+                    <FormLabel className="text-sm sm:text-base">Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                      />
+                    </FormControl>
+                  </FormItem>
                 )}
               />
+
+              {/* Email */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm sm:text-base">
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+
+              {/* Message */}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm sm:text-base">
+                      Message
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        {...field}
+                        className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+
               <button
                 type="submit"
                 className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-4 py-2 rounded w-full transition-all duration-300"
