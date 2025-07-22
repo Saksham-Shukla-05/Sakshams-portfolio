@@ -22,19 +22,18 @@ export default function Contact() {
     <section className="mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           Contact <span className="text-purple-500">Me</span>
         </h2>
-        <p className="mt-2 text-gray-600 dark:text-gray-400 text-base sm:text-lg md:text-xl">
+        <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">
           Have a question, an opportunity, or just want to say hi? I'd love to
           hear from you.
         </p>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col md:flex-row h-full md:gap-12 gap-24 items-center justify-between w-full">
-        {/* Left Section */}
-        <div className="md:w-1/2 w-full  h-full justify-center text-center md:text-left flex flex-col gap-4 text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-300 leading-relaxed">
+      <div className="flex flex-col md:flex-row h-full md:gap-12 gap-10 items-center justify-between w-full">
+        <div className="md:w-1/2 w-full h-full justify-center  py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
             Feel free to reach out through the form or drop me an email
             directly. I'm open to freelance projects, collaborations.
@@ -65,9 +64,10 @@ export default function Contact() {
             </a>
           </p>
         </div>
+        {/* Left Section */}
 
         {/* Right Section (Form) */}
-        <div className="md:w-1/2 w-full  bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div className="md:w-1/2 w-full bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit((data) => console.log(data))}
@@ -79,23 +79,38 @@ export default function Contact() {
                 render={({ field }) => (
                   <>
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel className="text-sm sm:text-base">
+                        Name
+                      </FormLabel>
                       <FormControl>
-                        <Input {...field} />
+                        <Input
+                          {...field}
+                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                        />
                       </FormControl>
                     </FormItem>
 
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="text-sm sm:text-base">
+                        Email
+                      </FormLabel>
                       <FormControl>
-                        <Input {...field} />
+                        <Input
+                          {...field}
+                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                        />
                       </FormControl>
                     </FormItem>
 
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel className="text-sm sm:text-base">
+                        Message
+                      </FormLabel>
                       <FormControl>
-                        <Textarea {...field} />
+                        <Textarea
+                          {...field}
+                          className="px-3 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring focus:ring-purple-300"
+                        />
                       </FormControl>
                     </FormItem>
                   </>
@@ -103,7 +118,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="bg-purple-700 w-full text-white px-4 py-2 rounded"
+                className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-4 py-2 rounded w-full transition-all duration-300"
               >
                 Submit
               </button>

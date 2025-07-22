@@ -98,7 +98,7 @@ const CARDS = [
 
 export default function Glimse() {
   return (
-    <section className="md:min-h-screen mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="md:min-h-screen mt-15 p-8  gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
