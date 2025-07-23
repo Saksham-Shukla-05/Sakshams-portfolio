@@ -29,7 +29,7 @@ export default function Contact() {
       {/* Heading */}
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-          Contact <span className="text-purple-500">Me</span>
+          Drop a <span className="text-purple-500">Message</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">
           Have a question, an opportunity, or just want to say hi? I’d love to

@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left Summary */}
         <div className="text-center md:w-1/2 w-full md:text-justify max-w-md">
           <h3 className="text-lg font-bold text-purple-600">Saksham Shukla</h3>
-          <p className="md:text-base text-sm mt-2 py-3 ">
+          <p className="md:text-base text-sm mt-2 py-3 tracking-wider">
             Full-stack developer passionate about building scalable and
             user-friendly web applications with <strong>MERN</strong> and{" "}
             <strong>Next.js</strong>. Always learning, improving, and exploring

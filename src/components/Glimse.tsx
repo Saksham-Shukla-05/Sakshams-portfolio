@@ -94,7 +94,7 @@ export default function Glimse() {
       {/* Heading */}
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-          About <span className="text-purple-500">Me</span>
+          Know Me <span className="text-purple-500">Better</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">
           Here’s a quick glimpse of what I do and the technologies I work with.
@@ -107,7 +107,7 @@ export default function Glimse() {
           <CardStack items={CARDS} />
         </div>
 
-        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base md:text-lg max-w-4xl text-gray-800 dark:text-gray-300 leading-relaxed order-2 md:order-1">
+        <div className="flex md:w-1/2 w-full text-justify flex-col gap-4 text-sm sm:text-base md:text-lg max-w-5xl text-gray-800 dark:text-gray-300 leading-relaxed order-2 md:order-1">
           <p>
             I’m a full stack developer currently exploring and building projects
             using the MERN stack and TypeScript.
