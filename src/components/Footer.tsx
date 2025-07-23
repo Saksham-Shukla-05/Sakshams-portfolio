@@ -11,9 +11,9 @@ export default function Footer() {
     <footer className="mt-15 p-8 w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
       <div className="flex flex-col md:flex-row justify-between items-center gap-12">
         {/* Left Summary */}
-        <div className="text-center md:w-1/2 w-full md:text-left max-w-md">
+        <div className="text-center md:w-1/2 w-full md:text-justify max-w-md">
           <h3 className="text-lg font-bold text-purple-600">Saksham Shukla</h3>
-          <p className="text-sm mt-2 border-3 border-red-400 py-6 ">
+          <p className="text-base mt-2 py-3 ">
             Full-stack developer passionate about building scalable and
             user-friendly web applications with <strong>MERN</strong> and{" "}
             <strong>Next.js</strong>. Always learning, improving, and exploring
@@ -23,23 +23,6 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="flex flex-row items-center gap-4 md:w-1/2 w-full justify-around">
-          <div className="flex items-center flex-col gap-5">
-            <p>Quick Links</p>
-            <Link href="/" className="hover:text-purple-500 transition">
-              Home
-            </Link>
-            <Link href="/about" className="hover:text-purple-500 transition">
-              About
-            </Link>
-            <Link href="/projects" className="hover:text-purple-500 transition">
-              Projects
-            </Link>
-            <Link href="/contact" className="hover:text-purple-500 transition">
-              Contact
-            </Link>
-          </div>
-
-          {/* Social Icons */}
           <div className="flex items-center flex-col gap-5">
             <p>Socials</p>
             <Link
@@ -63,6 +46,24 @@ export default function Footer() {
               <Mail size={22} />
             </Link>
           </div>
+
+          <div className="flex items-center flex-col gap-5">
+            <p>Quick Links</p>
+            <Link href="/" className="hover:text-purple-500 transition">
+              Home
+            </Link>
+            <Link href="/about" className="hover:text-purple-500 transition">
+              About
+            </Link>
+            <Link href="/projects" className="hover:text-purple-500 transition">
+              Projects
+            </Link>
+            <Link href="/contact" className="hover:text-purple-500 transition">
+              Contact
+            </Link>
+          </div>
+
+          {/* Social Icons */}
         </div>
       </div>
 
@@ -74,7 +75,7 @@ export default function Footer() {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute right-6 bottom-6 p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition"
+        className="absolute right-0 bottom-0 p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition"
         aria-label="Back to top"
       >
         <ArrowUp size={18} />

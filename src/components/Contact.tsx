@@ -38,9 +38,9 @@ export default function Contact() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col md:flex-row h-full md:gap-12 gap-10 items-center justify-between w-full">
+      <div className="flex flex-col md:flex-row h-full md:gap-12 gap-10 items-center md:justify-center justify-between w-full">
         {/* Left Section */}
-        <div className="md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+        <div className="md:hidden md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
           <p>
             Feel free to reach out through the form or drop me an email
             directly. I’m open to freelance projects, collaborations.
@@ -73,7 +73,7 @@ export default function Contact() {
         </div>
 
         {/* Right Section (Form) */}
-        <div className="md:w-1/2 w-full bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div className="w-full md:min-w-6xl bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {/* Name */}
