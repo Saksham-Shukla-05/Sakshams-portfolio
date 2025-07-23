@@ -73,9 +73,12 @@ export default function Contact() {
         </div>
 
         {/* Right Section (Form) */}
-        <div className="w-full md:min-w-6xl bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div className="w-full md:max-w-5xl bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-6 flex flex-col"
+            >
               {/* Name */}
               <FormField
                 control={form.control}
@@ -133,7 +136,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-4 py-2 rounded w-full transition-all duration-300"
+                className=" bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-4 py-2 rounded  transition-all duration-300"
               >
                 Submit
               </button>
