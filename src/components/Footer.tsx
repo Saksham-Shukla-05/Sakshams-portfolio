@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className=" p-8 w-full bg-gray-100 dark:bg-black  dark:text-gray-300">
+    <footer className=" mt-15 p-8 w-full flex justify-between flex-col gap-12 bg-gray-200 dark:bg-black  dark:text-gray-300">
       <div className="flex flex-col  md:flex-row justify-between items-center gap-6">
         {/* Left Summary */}
         <div className="text-center  md:w-1/2 w-full md:text-left max-w-md">
@@ -41,7 +41,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-300 dark:border-gray-700 text-center py-3 text-sm">
+      <div className="border-gray-300 dark:border-gray-700 text-center  text-sm">
         © {new Date().getFullYear()} Saksham Shukla. All rights reserved.
       </div>
     </footer>
