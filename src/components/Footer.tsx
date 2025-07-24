@@ -8,12 +8,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="p-8 mt-20 border-t  w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
-        {/* Left Summary */}
-        <div className="text-center md:border-r-4 px-4 border-none  md:w-1/2 w-full md:text-justify max-w-md">
-          <h3 className="text-lg font-bold text-purple-600">Saksham Shukla</h3>
-          <p className="md:text-base text-sm mt-2 py-3 tracking-wider">
+    <footer className="p-4 mt-20 border-t w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
+      <div className="flex flex-col mt-10 md:flex-row justify-between items-center gap-12">
+        {/* Summary */}
+        <div className="text-center md:border-r-4 px-4 border-none md:w-1/2 w-full md:text-justify max-w-md">
+          <h3 className="text-xl font-bold text-black dark:text-white">
+            &lt;/Saksham&gt;
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-2">
+            Coding with purpose.
+          </p>
+          <p className="md:text-base text-sm mt-2 leading-loose">
             Full-stack developer passionate about building scalable and
             user-friendly web applications with <strong>MERN</strong> and{" "}
             <strong>Next.js</strong>. Always learning, improving, and exploring
@@ -21,10 +26,11 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
-        <div className="flex flex-row items-center gap-4 md:w-1/2 w-full justify-around">
-          <div className="flex items-center flex-col gap-5">
-            <p>Socials</p>
+        {/* Links Section */}
+        <div className="flex flex-row flex-wrap items-start gap-12 md:w-1/2 w-full justify-around">
+          {/* Socials */}
+          <div className="flex text-center items-center flex-col gap-5">
+            <p className="font-medium">Socials</p>
             <Link
               href="https://github.com/Saksham-Shukla-05"
               target="_blank"
@@ -47,8 +53,9 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex items-center flex-col gap-5">
-            <p>Quick Links</p>
+          {/* Quick Links */}
+          <div className="flex text-center flex-col gap-5">
+            <p className="font-medium">Quick Links</p>
             <Link href="/" className="hover:text-purple-500 transition">
               Home
             </Link>
@@ -63,12 +70,36 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Social Icons */}
+          {/* More Links */}
+          <div className="flex text-center flex-col gap-5">
+            <p className="font-medium">Resources</p>
+            <Link
+              href="/text-vault"
+              className="hover:text-purple-500 transition"
+            >
+              Text Vault
+            </Link>
+            <Link href="/anon-msg" className="hover:text-purple-500 transition">
+              Anon Messenger
+            </Link>
+            <Link
+              href="/project-graph"
+              className="hover:text-purple-500 transition"
+            >
+              Project Graph
+            </Link>
+            <Link
+              href="/board-buddy"
+              className="hover:text-purple-500 transition"
+            >
+              Board Buddy
+            </Link>
+          </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className=" text-center text-sm pt-4">
+      <div className="text-center text-sm pt-4">
         © {new Date().getFullYear()} Saksham Shukla. All rights reserved.
       </div>
 
