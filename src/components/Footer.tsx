@@ -8,10 +8,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-15 p-8 w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
+    <footer className="p-8 mt-20 border-t  w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
       <div className="flex flex-col md:flex-row justify-between items-center gap-12">
         {/* Left Summary */}
-        <div className="text-center md:w-1/2 w-full md:text-justify max-w-md">
+        <div className="text-center md:border-r-4 px-4 border-none  md:w-1/2 w-full md:text-justify max-w-md">
           <h3 className="text-lg font-bold text-purple-600">Saksham Shukla</h3>
           <p className="md:text-base text-sm mt-2 py-3 tracking-wider">
             Full-stack developer passionate about building scalable and
@@ -68,7 +68,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-300 dark:border-gray-700 text-center text-sm pt-4">
+      <div className=" text-center text-sm pt-4">
         © {new Date().getFullYear()} Saksham Shukla. All rights reserved.
       </div>
 

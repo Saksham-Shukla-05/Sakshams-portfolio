@@ -76,7 +76,7 @@ const CARDS = [
         <p className="text-sm sm:text-base dark:text-gray-200 text-black">
           Check out my GitHub for real-world apps.
           <a
-            href="https://github.com/saksham729"
+            href="https://github.com/Saksham-Shukla-05"
             target="_blank"
             className="block mt-1 text-black dark:text-purple-300 underline hover:text-purple-400 transition"
           >
@@ -90,7 +90,7 @@ const CARDS = [
 
 export default function Glimse() {
   return (
-    <section className="md:min-h-screen mt-15 p-8  gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="border-b md:min-h-screen mt-20 p-8  gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">

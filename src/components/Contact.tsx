@@ -25,7 +25,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="mt-15 p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="mt-20  p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
@@ -73,7 +73,7 @@ export default function Contact() {
         </div>
 
         {/* Right Section (Form) */}
-        <div className="w-full md:max-w-5xl bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div className="w-full md:max-w-5xl bg-gray-200 dark:bg-gray-900 p-6 rounded-xl shadow-md">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}

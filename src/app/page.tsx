@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 export default function Home() {
   return (
-    <main className=" dark:bg-black bg-white flex flex-col w-full  md:gap-0 gap-8 items-center  ">
+    <main className=" dark:bg-black bg-white flex flex-col w-full  md:gap-0  items-center  ">
       <Navbar />
       <HeroSection />
       <Glimse />
