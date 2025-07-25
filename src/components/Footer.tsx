@@ -1,6 +1,13 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUp, GitFork } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUp,
+  GitFork,
+  GitPullRequest,
+} from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -84,7 +91,9 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-purple-500 transition"
             >
-              ⭐ Star on GitHub
+              <p className="flex flex-row gap-3 justify-center">
+                <GitFork /> Fork this Project
+              </p>
             </Link>
 
             <Link
@@ -93,8 +102,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-purple-500 transition"
             >
-              <p className="flex flex-row gap-3">
-                <GitFork /> Fork this Project
+              <p className="flex flex-row gap-3 justify-center">
+                <GitPullRequest /> Contribute on GitHub
               </p>
             </Link>
           </div>
