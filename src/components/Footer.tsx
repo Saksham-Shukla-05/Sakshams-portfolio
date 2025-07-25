@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp, GitFork } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ export default function Footer() {
         {/* Links Section */}
         <div className="flex flex-row flex-wrap  items-start gap-12 lg:w-1/2 w-full justify-around">
           {/* Socials */}
-          <div className="flex text-center mt-0 items-center flex-col gap-9">
+          <div className="flex text-center mt-0 items-center flex-col gap-5">
             <p className="font-medium">Let's connect</p>
             <Link
               href="https://github.com/Saksham-Shukla-05"
@@ -65,34 +65,37 @@ export default function Footer() {
             <Link href="/projects" className="hover:text-purple-500 transition">
               Projects
             </Link>
-            <Link href="/contact" className="hover:text-purple-500 transition">
-              Contact
-            </Link>
           </div>
 
           {/* More Links */}
           <div className="flex text-center flex-col gap-5">
-            <p className="font-medium">Resources</p>
+            <p className="font-medium">Feedback</p>
+
             <Link
-              href="/text-vault"
+              href="mailto:saksham@example.com"
               className="hover:text-purple-500 transition"
             >
-              Text Vault
+              Send Feedback
             </Link>
-            <Link href="/anon-msg" className="hover:text-purple-500 transition">
-              Anon Messenger
-            </Link>
+
             <Link
-              href="/project-graph"
+              href="https://github.com/Saksham-Shukla-05/your-portfolio-repo"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-purple-500 transition"
             >
-              Project Graph
+              ⭐ Star on GitHub
             </Link>
+
             <Link
-              href="/board-buddy"
+              href="https://github.com/Saksham-Shukla-05/your-portfolio-repo/fork"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-purple-500 transition"
             >
-              Board Buddy
+              <p className="flex flex-row gap-3">
+                <GitFork /> Fork this Project
+              </p>
             </Link>
           </div>
         </div>
