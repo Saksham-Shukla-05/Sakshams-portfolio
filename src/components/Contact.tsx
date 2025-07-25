@@ -25,8 +25,9 @@ export default function Contact() {
   };
 
   return (
-    <section className="mt-20  p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="mt-20    p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
+
       <div className="w-full text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           Drop a <span className="text-purple-500">Message</span>
@@ -37,34 +38,42 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* Content */}
       {/* Content Section */}
       <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Optional subtle horizontal divider for mid screen */}
         <div className="w-16 h-1 bg-purple-500 rounded-full" />
 
         {/* Contact Icons (optional flair) */}
-        <div className="flex gap-6 text-purple-600">
-          <a
-            href="https://github.com/Saksham-Shukla-05"
-            target="_blank"
-            className="hover:scale-110 transition"
-          >
-            GitHub →
-          </a>
-          <a
-            href="https://www.linkedin.com/in/saksham-shukla-9758602a6"
-            target="_blank"
-            className="hover:scale-110 transition"
-          >
-            LinkedIn →
-          </a>
-          <a
-            href="mailto:shuklasaksham729@gmail.com"
-            className="hover:scale-110 transition"
-          >
-            Email →
-          </a>
+        <div className="md:hidden md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+          <p>
+            Feel free to reach out through the form or drop me an email
+            directly. I’m open to freelance projects, collaborations.
+          </p>
+          <p>
+            <span className="font-semibold text-purple-500">Email:</span>{" "}
+            <a
+              href="mailto:shuklasaksham729@gmail.com"
+              className="underline hover:text-purple-400"
+            >
+              shuklasaksham729@gmail.com
+            </a>
+          </p>
+          <p className="flex md:justify-start justify-center gap-4">
+            <a
+              href="https://github.com/Saksham-Shukla-05"
+              target="_blank"
+              className="hover:text-purple-500"
+            >
+              GitHub →
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saksham-shukla-9758602a6"
+              target="_blank"
+              className="hover:text-purple-500"
+            >
+              LinkedIn →
+            </a>
+          </p>
         </div>
 
         {/* Form Box */}

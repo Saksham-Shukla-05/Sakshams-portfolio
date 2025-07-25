@@ -100,6 +100,7 @@ export default function Glimse() {
           Here’s a quick glimpse of what I do and the technologies I work with.
         </p>
       </div>
+      <div className="w-16 h-1 bg-purple-500 rounded-full" />
 
       <div className="flex flex-row h-full md:gap-0 gap-24 items-center flex-wrap md:justify-center justify-between text-center w-full">
         {/* Right Cards (should come first on small screens) */}
