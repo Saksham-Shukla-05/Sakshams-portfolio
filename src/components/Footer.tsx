@@ -15,15 +15,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="p-5 mt-20 border-t w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
+    <footer className="p-5 py-8 mt-20 border-t w-full flex flex-col gap-12 bg-gray-200 dark:bg-black dark:text-gray-300 relative">
       <div className="flex flex-col mt-10 md:flex-row justify-between items-center gap-12">
         {/* Summary */}
         <div className="text-center md:border-r-4 px-4 border-none md:w-1/2 w-full lg:text-justify max-w-md">
-          <h3 className="text-xl font-mono font-bold text-purple-700 dark:text-white">
+          <h3 className="text-xl font-mono font-bold text-purple-500 tracking-wide dark:text-white">
             &lt;/Saksham&gt;
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-2">
-            Coding with purpose.
+          <p className="text-sm text-gray-600 dark:text-purple-400 mt-2 mb-2">
+            ~ Coding with purpose.
           </p>
           <p className="md:text-base text-sm mt-2 leading-loose">
             Full-stack developer passionate about building scalable and
@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="flex flex-row flex-wrap  items-start gap-12 lg:w-1/2 w-full justify-around">
           {/* Socials */}
           <div className="flex text-center mt-0 items-center flex-col gap-5">
-            <p className="font-medium">Let's connect</p>
+            <p className="font-medium dark:text-purple-500">Let’s connect</p>
             <Link
               href="https://github.com/Saksham-Shukla-05"
               target="_blank"
@@ -62,11 +62,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex text-center flex-col gap-5">
-            <p className="font-medium">Quick Links</p>
+            <p className="font-medium dark:text-purple-500">Find Your Way</p>
             <Link href="/" className="hover:text-purple-500 transition">
               Home
             </Link>
-            <Link href="/about" className="hover:text-purple-500 transition">
+            <Link href="/About" className="hover:text-purple-500 transition">
               About
             </Link>
             <Link href="/projects" className="hover:text-purple-500 transition">
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* More Links */}
           <div className="flex text-center flex-col gap-5">
-            <p className="font-medium">Feedback</p>
+            <p className="font-medium dark:text-purple-500"> Build with Me</p>
 
             <Link
               href="mailto:saksham@example.com"

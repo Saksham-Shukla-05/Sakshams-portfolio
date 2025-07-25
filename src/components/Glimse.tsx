@@ -93,7 +93,7 @@ export default function Glimse() {
     <section className="border-b md:min-h-screen mt-20 p-8  gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
       <div className="w-full text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
           Know Me <span className="text-purple-500">Better</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">

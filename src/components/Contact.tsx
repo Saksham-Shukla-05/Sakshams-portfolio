@@ -25,11 +25,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="mt-20    p-8 md:gap-22 gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
+    <section className="mt-20    p-8   gap-12 w-full justify-around flex flex-col items-center dark:bg-black bg-white text-black dark:text-white">
       {/* Heading */}
 
       <div className="w-full text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        <h2 className="text-2xl sm:text-3xl mb-3 md:text-4xl font-bold">
           Drop a <span className="text-purple-500">Message</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm sm:text-base md:text-lg">
@@ -37,11 +37,11 @@ export default function Contact() {
           hear from you.
         </p>
       </div>
+      <div className="w-16 h-1 bg-purple-500 rounded-full" />
 
       {/* Content Section */}
       <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-8 md:gap-12">
         {/* Optional subtle horizontal divider for mid screen */}
-        <div className="w-16 h-1 bg-purple-500 rounded-full" />
 
         {/* Contact Icons (optional flair) */}
         <div className="md:hidden md:w-1/2 w-full h-full justify-center py-2 text-center md:text-justify flex flex-col md:gap-8 gap-3 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
