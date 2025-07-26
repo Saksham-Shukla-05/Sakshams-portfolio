@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Links Section */}
         <div className="flex flex-row flex-wrap  items-start gap-12 lg:w-1/2 w-full justify-around">
           {/* Socials */}
-          <div className="flex text-center mt-0 items-center flex-col gap-5">
+          <div className="flex text-center text-sm mt-0 items-center flex-col gap-5">
             <p className="font-medium dark:text-purple-500">Let’s connect</p>
             <Link
               href="https://github.com/Saksham-Shukla-05"
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex text-center flex-col gap-5">
+          <div className="flex text-center text-sm flex-col gap-5">
             <p className="font-medium dark:text-purple-500">Find Your Way</p>
             <Link href="/" className="hover:text-purple-500 transition">
               Home
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
 
           {/* More Links */}
-          <div className="flex text-center flex-col gap-5">
+          <div className="flex text-center text-sm flex-col gap-5">
             <p className="font-medium dark:text-purple-500"> Build with Me</p>
 
             <Link

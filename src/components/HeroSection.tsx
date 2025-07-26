@@ -5,14 +5,14 @@ import { toast } from "sonner";
 
 export default function CardDemo() {
   return (
-    <main className="md:h-screen border-b dark:bg-black bg-white w-full rounded-none shadow-none p-8">
+    <main className="md:h-screen border-b md:-mt-4 mt-0 dark:bg-black bg-white w-full rounded-none shadow-none p-8">
       <div className="h-full relative border-none md:bg-[url('/blob-blob-2.png')] p-0 bg-[url('/wave-haikei3.png')] bg-cover bg-no-repeat bg-bottom">
         <div className="h-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0">
           {/* Left Section */}
           <div className="w-full h-full justify-center gap-6 flex flex-col text-center items-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
               Hi, I&apos;m{" "}
-              <span className="text-purple-500">Saksham Shukla</span>
+              <p className="text-purple-500 md:inline block">Saksham Shukla</p>
             </h1>
             <p className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200">
               A passionate Full Stack Developer from India

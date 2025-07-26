@@ -21,7 +21,7 @@ export default function NavigationMenuDemo() {
         &lt;/Saksham&gt;
       </div>
       <NavigationMenu viewport={false}>
-        <NavigationMenuList className="gap-5  px-4 hidden md:flex ">
+        <NavigationMenuList className="gap-5  hidden md:flex ">
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
