@@ -49,16 +49,14 @@ export default function Contact() {
             Feel free to reach out through the form or drop me an email
             directly. I’m open to freelance projects, collaborations.
           </p>
-          <p>
-            <span className="font-semibold text-purple-500">Email:</span>{" "}
+
+          <p className="flex md:justify-start justify-center gap-4">
             <a
               href="mailto:shuklasaksham729@gmail.com"
-              className="underline hover:text-purple-400"
+              className=" hover:text-purple-400"
             >
-              shuklasaksham729@gmail.com
+              Email →
             </a>
-          </p>
-          <p className="flex md:justify-start justify-center gap-4">
             <a
               href="https://github.com/Saksham-Shukla-05"
               target="_blank"
