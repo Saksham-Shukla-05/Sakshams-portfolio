@@ -1,14 +1,14 @@
 import { FaNode } from "react-icons/fa";
 const About = () => {
   return (
-    <section className="w-full min-h-screen px-6   md:px-8 py-10 md:py-20 flex flex-col items-center gap-12">
-      <div className="w-full   flex flex-col py-10 items-center gap-4 md:gap-6 text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-loose">
+    <section className="w-full min-h-screen px-6 justify-between  md:px-8 py-10 md:py-20 flex flex-col items-center gap-24">
+      <div className="w-full    flex flex-col items-center gap-4 md:gap-6 text-center">
+        <h2 className="text-3xl  sm:text-4xl md:text-5xl font-bold leading-loose">
           Meet the <span className="text-purple-500">Developer</span>
         </h2>
         <div className="w-12 md:w-16 h-1 bg-purple-500 rounded-full" />
 
-        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base max-w-4xl leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base md:max-w-5xl  leading-relaxed">
           I'm{" "}
           <span className="font-semibold text-purple-500">Saksham Shukla</span>,
           a full-stack developer passionate about creating fast, scalable, and
@@ -25,12 +25,11 @@ const About = () => {
         </p>
       </div>
 
-      <div className="w-full px-2   py-10 flex flex-col  items-center gap-10">
-        <div>
-          <h3 className="text-2xl sm:text-3xl  text-center md:text-4xl font-semibold text-purple-500">
-            Tech Stack
-          </h3>
-        </div>
+      <div className="w-full px-2 leading-loose  border-t  flex flex-col  items-center  gap-4 md:gap-6">
+        <h3 className="text-2xl mt-5 sm:text-3xl  text-center md:text-4xl font-semibold">
+          Development <span className="text-purple-500">Stack</span>
+        </h3>
+        <div className="w-12 md:w-16 h-1 bg-purple-500 rounded-full" />
 
         <div className="md:max-w-5xl md:py-15 py-5 w-full flex flex-wrap flex-row md:gap-15 gap-5 items-center  justify-evenly text-sm md:text-base text-gray-600 dark:text-gray-400">
           <p className=" rounded-2xl md:w-40 bg-js md:h-40 w-24 h-24  flex items-center justify-center">
