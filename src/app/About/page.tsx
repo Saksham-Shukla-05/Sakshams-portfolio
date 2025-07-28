@@ -52,7 +52,7 @@ const About = () => {
               </g>
             </svg>
           </p>
-          <p className=" rounded-[50%] bg-ts md:w-40 md:h-40 w-20 h-20  flex items-center justify-center">
+          <p className=" rounded-[50%] bg-ts md:w-40 md:h-40 w-20 h-20  flex items-center flex-col justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={50}
@@ -69,6 +69,7 @@ const About = () => {
                 </g>
               </g>
             </svg>
+            TypeScript
           </p>
           <p className="rounded-[50%] bg-react md:w-40 md:h-40 w-20 h-20  flex items-center justify-center">
             <svg
