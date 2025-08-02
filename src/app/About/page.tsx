@@ -103,7 +103,7 @@ const About = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Card className="w-full h-40 flex flex-col justify-center items-center text-center p-5 shadow-md hover:shadow-lg cursor-pointer transition-all duration-200 border border-zinc-200 dark:border-zinc-700">
-                <CardTitle className="text-purple-600 dark:text-purple-400">
+                <CardTitle className="text-purple-600 uppercase dark:text-purple-400">
                   {card.title}
                 </CardTitle>
                 <CardDescription className="mt-2 text-sm">
