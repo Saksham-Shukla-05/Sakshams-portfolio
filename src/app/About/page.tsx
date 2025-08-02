@@ -1,9 +1,6 @@
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+"use client";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const stack = [
   // Frontend stack
@@ -54,7 +51,7 @@ const stack = [
 
 const About = () => {
   return (
-    <section className="w-full min-h-screen px-6 sm:px-8 py-14 md:py-20 flex flex-col items-center gap-10 md:gap-16">
+    <section className="w-full min-h-screen px-8 sm:px-8 py-14 md:py-20 flex flex-col items-center gap-10 md:gap-16">
       {/* Intro Heading */}
       <div className="flex flex-col gap-2 items-center text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
@@ -100,17 +97,20 @@ const About = () => {
 
         <div className="w-full mt-6 grid gap-5 sm:gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 max-w-6xl">
           {stack.map((card) => (
-            <Card
+            <motion.div
               key={card.title}
-              className="w-full h-40 flex flex-col justify-center items-center text-center p-5 shadow-md hover:shadow-lg cursor-pointer transition-all duration-200 border border-zinc-200 dark:border-zinc-700"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <CardTitle className="text-purple-600 dark:text-purple-400">
-                {card.title}
-              </CardTitle>
-              <CardDescription className="mt-2 text-sm">
-                {card.des}
-              </CardDescription>
-            </Card>
+              <Card className="w-full h-40 flex flex-col justify-center items-center text-center p-5 shadow-md hover:shadow-lg cursor-pointer transition-all duration-200 border border-zinc-200 dark:border-zinc-700">
+                <CardTitle className="text-purple-600 dark:text-purple-400">
+                  {card.title}
+                </CardTitle>
+                <CardDescription className="mt-2 text-sm">
+                  {card.des}
+                </CardDescription>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
