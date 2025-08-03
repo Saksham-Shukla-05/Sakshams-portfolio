@@ -1,4 +1,4 @@
-import { MessageCircle, Home, Info, FileText, FolderDot } from "lucide-react";
+import { Home, Info, FileText, FolderDot } from "lucide-react";
 
 import {
   Sidebar,
