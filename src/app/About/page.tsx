@@ -67,7 +67,7 @@ const About = () => {
       {/* Bio */}
       <div className="flex w-full md:text-center text-justify flex-col gap-4 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed max-w-5xl">
         <p>
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <span className="font-semibold text-purple-500">Saksham Shukla</span>,
           a passionate and self-driven web developer currently in my final year
           of the Integrated Master of Computer Applications (I-MCA) program at
