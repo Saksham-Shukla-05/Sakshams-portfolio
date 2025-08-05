@@ -1,3 +1,4 @@
+import { transporter } from "@/lib/mailer";
 import { NextResponse } from "next/server";
 import { z, ZodError } from "zod";
 
@@ -11,7 +12,20 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { name, email, message } = schema.parse(body);
-    return NextResponse.json({ message: { name, email, message } });
+
+    await transporter.sendMail({
+      from: process.env.USER_MAIL,
+      to: email,
+      subject: `New message from ${name}`,
+      text: message,
+      html: `
+        <h2>New Message from Contact Form</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
+    });
+    return NextResponse.json({ message: "Message sent successfully" });
   } catch (error) {
     if (error instanceof ZodError) {
       return NextResponse.json(
