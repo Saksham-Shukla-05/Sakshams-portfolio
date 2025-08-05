@@ -10,18 +10,25 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import { contactSchema } from "@/schema/contactSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
+import z from "zod";
+import { FormMessage } from "@/components/ui/form";
 
 export default function Contact() {
-  const form = useForm({
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
+  type ContactFormData = {
+    name: string;
+    email: string;
+    message: string;
+  };
+  const form = useForm<z.infer<typeof contactSchema>>({
+    resolver: zodResolver(contactSchema),
+    mode: "onChange",
   });
 
-  const onSubmit = () => {
-    console.log("Form Data:");
+  const onSubmit = (obj: ContactFormData) => {
+    console.log("Form Data:", obj);
   };
 
   return (
@@ -77,7 +84,10 @@ export default function Contact() {
         {/* Form Box */}
         <div className="w-full bg-gray-200 dark:bg-gray-900 p-6 md:p-10 rounded-2xl shadow-lg border dark:border-gray-800 transition-all duration-300">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit((data) => onSubmit(data))}
+              className="space-y-6"
+            >
               {/* Name */}
               <FormField
                 control={form.control}
@@ -91,6 +101,7 @@ export default function Contact() {
                         className="px-4 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring-purple-300"
                       />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -107,6 +118,7 @@ export default function Contact() {
                         className="px-4 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring-purple-300"
                       />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
@@ -123,6 +135,7 @@ export default function Contact() {
                         className="px-4 py-2 text-sm sm:text-base border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:ring-purple-300"
                       />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />

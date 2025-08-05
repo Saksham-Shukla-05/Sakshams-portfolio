@@ -52,7 +52,7 @@ const CARDS = [
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h3 className="text-lg sm:text-xl font-bold text-purple-400">DSA</h3>
         <p className="text-sm sm:text-base dark:text-gray-200 text-black">
-          Solved 300+ LeetCode problems.
+          Solved 350+ LeetCode problems.
           <a
             href="https://leetcode.com/u/saksham729/"
             target="_blank"
