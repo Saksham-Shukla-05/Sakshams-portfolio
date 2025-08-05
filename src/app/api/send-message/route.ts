@@ -19,10 +19,16 @@ export async function POST(request: Request) {
       subject: `New message from ${name}`,
       text: message,
       html: `
-        <h2>New Message from Contact Form</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <div style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
+    <h2 style="color: #4CAF50;">Thanks for reaching out!</h2>
+    <p>Hey there,</p>
+    <p>Thank you for contacting me! I’ve received your message and will get back to you as soon as possible.</p>
+    <p>In the meantime, feel free to check out my portfolio or connect with me on <a href="https://www.linkedin.com/in/saksham-shukla-9758602a6"> LinkedIn </a>  </p>
+    <p>Have a great day!</p>
+    <br/>
+    <p>Best regards,</p>
+    <p><strong>Saksham Shukla</strong></p>
+  </div>
       `,
     });
     return NextResponse.json({ message: "Message sent successfully" });
