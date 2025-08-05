@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import {
   Form,
   FormControl,
@@ -12,9 +13,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { contactSchema } from "@/schema/contactSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
 import z from "zod";
 import { FormMessage } from "@/components/ui/form";
+import { toast } from "sonner";
 
 export default function Contact() {
   type ContactFormData = {
@@ -25,10 +26,27 @@ export default function Contact() {
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     mode: "onChange",
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
+  const handle = async (data: ContactFormData) => {
+    try {
+      const res = await axios.post("/api/send-message", data);
+      toast.success(res.data.message);
+      // console.log("Here after the from has send the data ", res.data);
+    } catch (error) {
+      console.log(
+        `error while sending in the form message please try again later ${error}`
+      );
+    }
+  };
+
   const onSubmit = (obj: ContactFormData) => {
-    console.log("Form Data:", obj);
+    handle(obj);
   };
 
   return (
