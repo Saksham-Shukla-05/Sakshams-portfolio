@@ -4,7 +4,7 @@ import { Project } from "@/model/project.Model";
 import dbConnect from "@/lib/dbConnect";
 import z from "zod";
 
-export const projectSchema = z.object({
+const projectSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
   slug: z.string().min(1),
@@ -15,17 +15,15 @@ export const projectSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    await dbConnect(); // ensure MongoDB is connected
+    await dbConnect();
 
     const body = await request.json();
 
-    // Validate request data with Zod schema
     const { title, description, slug, techStack, liveLink, gitHub } =
       projectSchema.parse(body);
 
     console.log(body);
 
-    // Save to database
     const newProject = await Project.create({
       title,
       description,
