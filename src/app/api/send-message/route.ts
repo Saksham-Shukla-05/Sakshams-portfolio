@@ -14,10 +14,12 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, message } = contactSchema.parse(body);
 
+    console.log(name);
+
     await transporter.sendMail({
       from: process.env.USER_MAIL,
       to: email,
-      subject: `New message from ${name}`,
+      subject: `New message from Saksham Shukla`,
       text: message,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">

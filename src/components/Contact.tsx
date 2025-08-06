@@ -16,8 +16,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
 import { FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+
   type ContactFormData = {
     name: string;
     email: string;
@@ -34,14 +38,19 @@ export default function Contact() {
   });
 
   const handle = async (data: ContactFormData) => {
+    setLoading(true);
+
     try {
       const res = await axios.post("/api/send-message", data);
       toast.success(res.data.message);
       // console.log("Here after the from has send the data ", res.data);
+      form.reset();
     } catch (error) {
       console.log(
         `error while sending in the form message please try again later ${error}`
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -159,9 +168,12 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="w-fit bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-6 py-2 rounded-full transition-all duration-300"
+                disabled={loading}
+                className={`w-fit bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-6 py-2 rounded-full transition-all duration-300 ${
+                  loading ? "opacity-70 cursor-not-allowed" : ""
+                }`}
               >
-                Submit
+                {!loading ? "Submit" : <Loader2 className="animate-spin" />}
               </button>
             </form>
           </Form>
