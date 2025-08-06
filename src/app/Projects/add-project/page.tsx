@@ -15,8 +15,20 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { projectSchema } from "@/schema/projectSchema";
 import { z } from "zod";
 import axios from "axios";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 const AddProjects = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const pass = searchParams.get("key");
+    if (pass !== process.env.MY_SECRET) {
+      router.push("/");
+    }
+  }, [searchParams, router]);
+
   const form = useForm<z.infer<typeof projectSchema>>({
     resolver: zodResolver(projectSchema),
     mode: "onChange",
@@ -38,7 +50,6 @@ const AddProjects = () => {
 
     try {
       const res = await axios.post("/api/add-projects", payload);
-      console.log(res);
       if (!res.data.message) throw new Error("Failed to add project");
       alert("Project added successfully!");
       form.reset();
@@ -51,7 +62,6 @@ const AddProjects = () => {
   return (
     <div className="w-full flex flex-col items-center">
       <h2 className="text-xl font-semibold mb-4">Add New Project</h2>
-
       <div className="max-w-5xl bg-gray-200 dark:bg-gray-900 p-6 md:p-10 rounded-2xl shadow-lg border dark:border-gray-800 transition-all duration-300">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
