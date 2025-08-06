@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { z } from "zod";
+import { Loader2 } from "lucide-react";
 
 // ✅ Zod schema & type
 const projectSchema = z.object({
@@ -53,7 +54,14 @@ function ProjectComponent() {
 
   return (
     <div className="md:p-8 p-4 flex flex-col items-center gap-8 justify-center md:mt-4 mt-8 dark:bg-black bg-white w-full">
-      {loading && <p>Loading projects...</p>}
+      {loading && (
+        <div className="flex gap-2">
+          <p>Loading projects</p>
+          <p>
+            <Loader2 className="animate-spin" />
+          </p>
+        </div>
+      )}
       {error && <p className="text-red-500">{error}</p>}
 
       {!loading && !error && projects.length > 0 && (
@@ -64,7 +72,7 @@ function ProjectComponent() {
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Link href={project.slug}>
+              <Link href={`/Projects/${encodeURIComponent(project.slug)}`}>
                 <Card className="flex flex-col h-full min-h-[320px] p-6 border border-zinc-200 dark:border-zinc-700 shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="flex flex-col flex-1 justify-between gap-6">
                     <div className="flex-1 flex flex-col justify-between gap-4">
