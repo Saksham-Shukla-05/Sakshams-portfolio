@@ -1,17 +1,18 @@
 import { transporter } from "@/lib/mailer";
+import { contactSchema } from "@/schema/contactSchema";
 import { NextResponse } from "next/server";
-import { z, ZodError } from "zod";
+import { ZodError } from "zod";
 
-const schema = z.object({
-  name: z.string().min(2, "Name is too short"),
-  email: z.string().email("Invalid email"),
-  message: z.string().min(5, "Message must be at least 5 characters"),
-});
+// const schema = z.object({
+//   name: z.string().min(2, "Name is too short"),
+//   email: z.string().email("Invalid email"),
+//   message: z.string().min(5, "Message must be at least 5 characters"),
+// });
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = schema.parse(body);
+    const { name, email, message } = contactSchema.parse(body);
 
     await transporter.sendMail({
       from: process.env.USER_MAIL,
