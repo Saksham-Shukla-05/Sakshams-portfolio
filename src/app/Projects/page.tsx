@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
 // ✅ Zod schema & type
 const projectSchema = z.object({
   title: z.string(),
@@ -23,7 +22,6 @@ function ProjectComponent() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const router = useRouter();
 
   const fetchProjects = async () => {
     setLoading(true);
@@ -73,10 +71,7 @@ function ProjectComponent() {
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Card
-                onClick={() => router.push(`/Projects/${project.slug}`)}
-                className="flex flex-col h-full min-h-[320px] p-6 border border-zinc-200 dark:border-zinc-700 shadow-md hover:shadow-xl transition-all duration-300"
-              >
+              <Card className="flex flex-col h-full min-h-[320px] p-6 border border-zinc-200 dark:border-zinc-700 shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col flex-1 justify-between gap-6">
                   <div className="flex-1 flex flex-col justify-between gap-4">
                     <CardTitle className="text-xl text-center text-purple-600 uppercase dark:text-purple-400 mb-3">
