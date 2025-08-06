@@ -15,19 +15,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { projectSchema } from "@/schema/projectSchema";
 import { z } from "zod";
 import axios from "axios";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+// import { useRouter, useSearchParams } from "next/navigation";
+// import { useEffect } from "react";
 
 const AddProjects = () => {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  // const router = useRouter();
+  // const searchParams = useSearchParams();
 
-  useEffect(() => {
-    const pass = searchParams.get("key");
-    if (pass !== process.env.MY_SECRET) {
-      router.push("/");
-    }
-  }, [searchParams, router]);
+  // useEffect(() => {
+  //   const pass = searchParams.get("key");
+  //   if (pass !== process.env.MY_SECRET) {
+  //     router.push("/");
+  //   }
+  // }, [searchParams, router]);
 
   const form = useForm<z.infer<typeof projectSchema>>({
     resolver: zodResolver(projectSchema),
