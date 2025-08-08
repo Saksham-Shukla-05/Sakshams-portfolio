@@ -19,19 +19,19 @@ export async function POST(request: Request) {
 
     const body = await request.json();
 
-    const { title, description, slug, techStack, liveLink, gitHub } =
-      projectSchema.parse(body);
+    // const { title, description, slug, techStack, liveLink, gitHub } =
+    //   projectSchema.parse(body);
 
     console.log(body);
 
-    const newProject = await Project.create({
-      title,
-      description,
-      slug,
-      techStack,
-      liveLink,
-      gitHub,
-    });
+    // const newProject = await Project.create({
+    //   title,
+    //   description,
+    //   slug,
+    //   techStack,
+    //   liveLink,
+    //   gitHub,
+    // });
 
     return NextResponse.json(
       { message: "Project added successfully!", project: newProject },
