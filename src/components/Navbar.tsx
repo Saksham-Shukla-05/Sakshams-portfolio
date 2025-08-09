@@ -62,12 +62,6 @@ export default function NavigationMenuDemo() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink asChild className="md:text-lg text-sm">
-              <Link href={"/Resume"}>Resume</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
             <DarkMode />
           </NavigationMenuItem>
         </NavigationMenuList>

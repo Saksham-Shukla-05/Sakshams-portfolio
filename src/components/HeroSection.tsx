@@ -24,17 +24,25 @@ export default function CardDemo() {
 
             <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center md:justify-start">
               <Button
-                onClick={() =>
+                onClick={() => {
                   toast("Downloading Resume", {
                     description: "You are downloading Saksham Shukla's resume.",
-                  })
-                }
+                  });
+
+                  const link = document.createElement("a");
+                  link.href = "/Saksham_Shukla_Resume.pdf";
+                  link.download = "Saksham_Shukla_Resume.pdf";
+                  link.click();
+                }}
                 className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto"
               >
                 Download Resume
               </Button>
-              <Button className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto">
-                Contact Me
+              <Button
+                asChild
+                className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto"
+              >
+                <a href="mailto:shuklasaksham729@gmail.com">Contact Me</a>
               </Button>
             </div>
           </div>

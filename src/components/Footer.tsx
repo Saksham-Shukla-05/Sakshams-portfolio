@@ -69,7 +69,7 @@ export default function Footer() {
             <Link href="/About" className="hover:text-purple-500 transition">
               About
             </Link>
-            <Link href="/projects" className="hover:text-purple-500 transition">
+            <Link href="/Projects" className="hover:text-purple-500 transition">
               Projects
             </Link>
           </div>

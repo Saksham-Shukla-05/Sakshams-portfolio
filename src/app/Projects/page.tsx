@@ -105,7 +105,7 @@ function ProjectComponent() {
                       target="_blank"
                       className=" hover:underline rounded-2xl border border-black p-2 dark:text-black dark:bg-white"
                     >
-                      Live Project
+                      Live Link
                     </Link>
                     <Link
                       href={project.gitHub}
