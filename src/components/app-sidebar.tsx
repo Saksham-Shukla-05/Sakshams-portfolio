@@ -31,6 +31,7 @@ const items = [
 
   {
     title: "Resume",
+    url: "/",
     icon: FileText,
   },
 ];

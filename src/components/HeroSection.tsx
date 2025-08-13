@@ -39,6 +39,9 @@ export default function CardDemo() {
                 Download Resume
               </Button>
               <Button
+                onClick={() => {
+                  toast("Redirecting to email!");
+                }}
                 asChild
                 className="bg-purple-700 cursor-pointer text-white w-full sm:w-auto"
               >
