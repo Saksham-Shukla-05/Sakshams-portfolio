@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { toast } from "sonner";
-
+import { track } from "@vercel/analytics";
 export default function CardDemo() {
   return (
     <main className="md:h-screen md:p-8 p-4  border-b md:mt-4 mt-8  dark:bg-black bg-white w-full rounded-none shadow-none  ">
@@ -29,6 +29,10 @@ export default function CardDemo() {
                     description: "You are downloading Saksham Shukla's resume.",
                   });
 
+                  track("Download Resume Clicked", {
+                    location: "Hero Section",
+                    file: "Saksham_Shukla_Resume.pdf",
+                  });
                   const link = document.createElement("a");
                   link.href = "/Saksham_Shukla_Resume.pdf";
                   link.download = "Saksham_Shukla_Resume.pdf";
