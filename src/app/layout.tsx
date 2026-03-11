@@ -25,6 +25,22 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicons.png",
   },
+    openGraph: {
+    title: "Saksham Shukla | Full Stack Developer",
+    description:
+      "Explore the portfolio of Saksham Shukla — a passionate Full Stack Web Developer skilled in building modern, responsive, and dynamic web applications.",
+    url: "https://www.sakshamshukla.in/",
+    siteName: "Saksham Shukla Portfolio",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dlycinwrl/image/upload/v1773247740/developer_portfolio_dnyag8.png",
+        width: 1200,
+        height: 630,
+        alt: "Saksham Shukla Portfolio",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
