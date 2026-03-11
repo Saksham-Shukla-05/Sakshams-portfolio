@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicons.png",
   },
-    openGraph: {
+  openGraph: {
     title: "Saksham Shukla | Full Stack Developer",
     description:
       "Explore the portfolio of Saksham Shukla — a passionate Full Stack Web Developer skilled in building modern, responsive, and dynamic web applications.",
